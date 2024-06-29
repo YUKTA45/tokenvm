@@ -12,16 +12,16 @@ import (
 )
 
 const (
-	// TODO: choose a human-readable part for your hyperchain
-	HRP = ""
-	// TODO: choose a name for your hyperchain
-	Name = ""
-	// TODO: choose a token symbol
-	Symbol = ""
+	
+	HRP = "primenode"
+	
+	Name = "PrimeNode"
+	
+	Symbol = "PRN"
 )
 
-var ID ids.ID
 
+var ID ids.ID
 func init() {
 	b := make([]byte, consts.IDLen)
 	copy(b, []byte(Name))
@@ -36,5 +36,5 @@ func init() {
 // values in [controller/registry].
 var (
 	ActionRegistry *codec.TypeParser[chain.Action, *warp.Message, bool]
-	AuthRegistry   *codec.TypeParser[chain.Auth, *warp.Message, bool]
+	AuthRegistry   *codec.TypeParser[chain.Auth, *warp.Message, bool]
 )
